@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Flask Auth App{% endblock %}
+
+{% block content %}
+  <section class="panel form-panel">
+    <h1>Log In</h1>
+    <form method="post" action="{{ url_for('auth.login') }}">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit">Log In</button>
+    </form>
+    <p class="muted">
+      New here?
+      <a href="{{ url_for('auth.register') }}">Create an account</a>.
+    </p>
+  </section>
+{% endblock %}

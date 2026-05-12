@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Flask Auth App{% endblock %}
+
+{% block content %}
+  <section class="panel">
+    <p class="eyebrow">Protected page</p>
+    <h1>Welcome, {{ user.username }}.</h1>
+    <p>This dashboard is only visible after logging in.</p>
+
+    <dl class="profile-list">
+      <div>
+        <dt>User ID</dt>
+        <dd>{{ user.id }}</dd>
+      </div>
+      <div>
+        <dt>Email</dt>
+        <dd>{{ user.email }}</dd>
+      </div>
+    </dl>
+
+    <a class="button" href="{{ url_for('api.user_profile') }}">View JSON API</a>
+  </section>
+{% endblock %}

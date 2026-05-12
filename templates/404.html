@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found | Flask Auth App{% endblock %}
+
+{% block content %}
+  <section class="panel error-panel">
+    <p class="eyebrow">404</p>
+    <h1>Page not found.</h1>
+    <p>The page you requested does not exist.</p>
+    <a class="button" href="{{ url_for('main.home') }}">Back Home</a>
+  </section>
+{% endblock %}

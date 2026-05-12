@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Flask Auth App{% endblock %}
+
+{% block content %}
+  <section class="panel hero">
+    <div>
+      <p class="eyebrow">Simple Flask starter</p>
+      <h1>Authentication, sessions, SQLite, and templates in one tidy app.</h1>
+      <p>
+        This project demonstrates a small but realistic Flask structure with
+        routes, models, reusable templates, and environment-based configuration.
+      </p>
+      <div class="actions">
+        {% if current_user %}
+          <a class="button" href="{{ url_for('main.dashboard') }}">Go to Dashboard</a>
+        {% else %}
+          <a class="button" href="{{ url_for('auth.register') }}">Create Account</a>
+          <a class="button button-secondary" href="{{ url_for('auth.login') }}">Log In</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

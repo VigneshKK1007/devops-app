@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Flask App",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "app"
+      },
+      "args": [
+        "run",
+        "--debug"
+      ],
+      "jinja": true
+    }
+  ]
+}

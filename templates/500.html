@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error | Flask Auth App{% endblock %}
+
+{% block content %}
+  <section class="panel error-panel">
+    <p class="eyebrow">500</p>
+    <h1>Something went wrong.</h1>
+    <p>The server hit an unexpected error.</p>
+    <a class="button" href="{{ url_for('main.home') }}">Back Home</a>
+  </section>
+{% endblock %}
